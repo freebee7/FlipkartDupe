@@ -10,13 +10,16 @@ const Login = () => {
         console.log(email);
     }
     return (
-        <form onSubmit={handleSubmit}>
-                <label for="email">email</label>
+        <div className="login-cont">
+            <form className="login-form" onSubmit={handleSubmit}>
+                <label for="email">Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="Email" id="email" name="email"></input>
-                <label for="password">password</label>
+                <label for="password">Password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)}type="password" placeholder="****" id="password" name="password"></input>
                 <button type="submit">Log In</button>     
-        </form>
+            </form>
+        </div>
+        
     )
 }
 
